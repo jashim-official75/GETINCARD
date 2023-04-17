@@ -1,0 +1,440 @@
+
+
+.profile_wrapper {
+    position: relative;
+    width: 425px;
+    height: 720px;
+    background: $light-color;
+
+    .share_profile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 1rem;
+        height: 100%;
+        background: $dark-color-6;
+
+        .share_modal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background: $light-color;
+            width: 90%;
+            height: 90%;
+
+            h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                color: $dark-color;
+                margin-bottom: 0;
+                padding: 1rem;
+                border-bottom: 1px solid $dark-color;
+
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 700;
+                text-align: center;
+                color: $dark-color;
+                margin-bottom: 0;
+                padding: 1rem;
+
+            }
+
+            .share_platform {
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    margin: 0;
+                    flex-wrap: wrap;
+                    padding: 0;
+                    gap: 1rem;
+                    width: 60%;
+                    margin: 2rem auto;
+
+                    li {
+                        #icon {
+                            width: 3.5rem;
+                            height: 3.5rem;
+                            @extend .flex_center;
+                            flex-wrap: wrap;
+                            border: 1px solid $primary-color;
+                            font-size: 1.5rem;
+                            color: $dark-color;
+                            @include border-radius(0.5rem);
+
+                            &:hover {
+                                background: $primary-color;
+                                color: $light-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .close_model {
+                position: absolute;
+                top: -0.5rem;
+                right: -0.5rem;
+                font-size: 2rem;
+                background: $secondary-color;
+                cursor: pointer;
+                width: 2.5rem;
+                height: 2.5rem;
+                @extend .flex_center;
+                color: $light-color;
+                @include border-radius(0.5rem);
+
+                &:hover {
+                    background: $dark-color;
+                    color: $light-color-6;
+                }
+            }
+        }
+    }
+
+    .qrcode {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: $dark-color;
+        color: $light-color;
+        @include transition(0.5s ease);
+
+        img {
+            width: 80%;
+            margin: 5rem auto 0;
+            display: block;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            text-align: center;
+            color: $light-color;
+            margin-bottom: 0;
+            padding: 1rem;
+        }
+
+        p {
+            color: $light-color !important;
+            text-align: center;
+
+        }
+
+        .close_qr {
+            position: absolute;
+            top: 0rem;
+            right: 1rem;
+            font-size: 3rem;
+            color: $light-color-6;
+            cursor: pointer;
+        }
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: $dark-bg;
+    @extend .flex_center;
+
+    .profile_wrapper {
+        .profile_card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            text-align: center;
+            width: 100%;
+            background: $dark-color;
+            height: 100%;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                width: 0 !important;
+            }
+
+            .profile_card-header_top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: $dark-color-1;
+                padding: 0.5rem;
+                border-bottom: 0.1rem solid $light-color-1;
+
+                i {
+                    color: $light-color;
+                    cursor: pointer;
+                }
+
+                .roundbox {
+
+                    @extend .flex_center;
+                    gap: 0.5rem;
+                    text-transform: uppercase;
+                    color: #fff;
+                    border: 0.1rem solid $light-color-2;
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    text-align: center;
+                    border-radius: 5rem;
+                    background: $light-color-1;
+                    cursor: pointer;
+                    margin-left: 1rem;
+                    @include transition(0.3s ease);
+
+                    &:hover {
+                        background: $dark-color-4;
+                    }
+
+                    i {
+                        font-size: 1rem;
+                        margin-top: 0.2rem;
+                    }
+                }
+            }
+
+            #key {
+                margin-left: 0 !important;
+            }
+
+            .profile_card-header_top .share_option {
+                display: flex;
+            }
+        }
+    }
+
+    .header_part {
+        position: relative;
+        background: $dark-variant;
+        @include border-radius(0.5rem 0.5rem 1.5rem 1.5rem);
+        width: 95%;
+        padding: 0rem 0 1rem;
+        overflow: hidden;
+        margin: 0.5rem auto 0;
+        .cover_header {
+           position: relative;
+            width: 100%;
+            height: 180px;
+            border: 0.2rem solid $light-color-1;
+            @include border-radius(0.8rem);
+
+            img {
+                position: relative;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            @include border-radius(0.8rem);
+
+            }
+        }
+        .profile_img {
+            position: absolute;
+            top: 35%;
+            bottom: 0;
+            left: 2%;
+            height: 100%;
+
+            a {
+                img {
+                    width: 8rem;
+                    height: 8rem;
+                    position: absolute;
+                    object-position: top 100%;
+                    top: 0;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    @include box-shadow(0 0.5rem 1rem $dark-color-1, 0 0 0 0.2rem $dark-color-1);
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    .profile_bio {
+        padding-left: 1rem;
+
+        .profile_title {
+            padding-top: 1.2rem;
+
+
+            h2 {
+                font-size: 1rem;
+                font-weight: 500;
+                text-align: left;
+                color: $light-color;
+                margin-bottom: 0.4rem;
+            }
+
+            h3 {
+                color: $light-color-6;
+                text-transform: capitalize;
+                font-weight: 400;
+                font-size: rem;
+                letter-spacing: 1px;
+                text-align: left;
+                margin-bottom: 0.5rem;
+            }
+
+        }
+
+        .profile_short_desc {
+            border-left: 0.2rem solid $light-color-4;
+
+            h4 {
+                font-size: 0.8rem !important;
+                font-weight: 300 !important;
+                margin-bottom: 0;
+                color: $light-color-4;
+                text-transform: capitalize;
+                text-align: left;
+                margin-left: 0.5rem;
+            }
+
+            .position {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .skills {
+            padding: 1rem 0 0;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0.5rem;
+
+                li {
+                    .skill {
+                        text-decoration: none;
+                        display: inline-block;
+                        padding: 0.4rem 1rem;
+                        background: linear-gradient($light-color-2, $dark-color 120%);
+                        color: $light-color-8;
+                        @include border-radius(10rem);
+                        font-weight: 300;
+                        transition: all 0s ease;
+                        font-size: 0.6rem;
+                        &:hover {
+                            background: linear-gradient(to top,
+                                    $light-color-2,
+                                    $dark-color-1 100%);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .connect_btns {
+        @extend .flex_center;
+        padding: 2rem 0 0;
+
+        .button {
+            background: $dark-gray;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 10px;
+            color: $light-color;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            font-weight: 300;
+            border: 1px solid $light-color-1;
+
+            &:hover {
+                background: $primary-color-1;
+                border: 1px solid $light-color-6;
+            }
+        }
+
+        .connect_btn {
+            padding: 0.8rem 2rem;
+            margin-right: 1rem;
+        }
+
+    }
+
+    .user_socail {
+        padding: 1rem 0 0;
+        width: 100%;
+        .link_box {
+          position: relative;
+
+          .link_card {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 3.8rem;
+            border-radius: 50px 15px 15px 50px;
+            background: $dark-variant;
+            width: 90%;
+            margin: 0.8rem auto;
+            padding-right: 1rem;
+            color: $light-color;
+            &:hover {
+              background: $secondary-color-1;
+            }
+            &:hover .icon{
+              background: $primary-color;
+            }
+            .icon {
+              position: relative;
+              top: 0;
+              left: 0rem;
+              bottom: 0;
+              right: 0;
+              background: $dark-gray;
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              transform: scale(1.3);
+              width: 2.5rem;
+              height: 2.5rem;
+              margin-right: 1rem;
+              i {
+                font-size: 1rem;
+                color: $light-color;
+              }
+            }
+            .link_inner {
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+              justify-content: flex-start;
+              text-align: left;
+              .link_title {
+                margin-bottom: 0.1rem;
+                font-size: 1rem;
+                text-transform: capitalize;
+                letter-spacing: 0;
+              }
+              .link_user {
+                font-size: 0.8rem;
+                color: $light-color-6;
+                margin-top: 0.1rem;
+              }
+            }
+          }
+        }
+      }
+
+}

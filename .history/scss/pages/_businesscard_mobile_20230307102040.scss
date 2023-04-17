@@ -1,0 +1,208 @@
+.card_container 
+{
+    position: relative;
+    @extend .flex_center;
+    width: 100%;
+    height: 100vh;
+
+    .card_wrapper 
+    {
+        position: relative;
+        width: 425px;
+        height: 720px;
+        // background: $dark-color;
+    }
+    .card_inner 
+    {
+        // background-color: #fff;
+        width: 100%;
+        height: 100%;
+        border-radius: 1.5rem;
+        overflow: hidden;
+    }
+    .card_header 
+    {
+        position: relative;
+       
+        &-cover 
+        {
+            position: relative;
+            width: 100%;
+            height:10rem;
+            @include border-radius(0.5rem);
+            overflow: hidden;
+            img 
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+           
+            }
+        }
+        .qr_cod_scanner 
+        {
+            position: absolute;
+            right: 2rem;
+            bottom: 2rem;
+            cursor: pointer;
+            z-index: 10;
+            #qrcode_scanner 
+            {
+                svg path {
+                    fill: $light-color;
+                    transition: fill 0.2s ease-in-out;
+                
+                  }
+                  &:hover  svg path
+                  {
+                      fill: $primary-color;
+                  }
+
+            }
+            
+        }
+    }
+
+    .card_body 
+    {
+        h6 
+        {
+            font-size: 16px;
+            font-weight: 500;
+            color: $dark-deep;
+            margin: 0.3rem 0;
+            // line-height: 1.5;
+             
+        }
+        .card_profile 
+        {
+            position: relative;
+            top: -5rem;
+            @extend .flex_center;
+            text-align: center;
+            width: 100%;
+            flex-direction: column;
+            &_avatar 
+            {
+                position: relative;
+                width: 8rem;
+                height: 8rem;
+                background: #fff;
+                border: 0.15rem solid $primary-color;
+                @include border-radius(1rem);
+                img 
+                {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &_name 
+            {
+
+                h2 
+                {
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-align: center;
+                    color: $dark-deep;
+                    margin: 0.8rem 0 0.4rem;
+                }
+            }
+            &_bio-data 
+            {
+                &_list 
+                {
+                    
+                   &-profession
+                   {
+                    h6 
+                    {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: $dark-deep;
+                        margin: 0.3rem 0;
+                        // line-height: 1.5;
+                        
+                        
+                    }
+                   }
+                   &-address 
+                   {
+                    span 
+                    {
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: $dark-deep;
+                        margin: 0;
+                    }
+                   }
+                }
+                &-text 
+                {
+                    text-align: center;
+                    min-width: 300px;
+                    margin: 0.5rem 0;
+                    
+                    @extend .flex_center;
+                    p 
+                    {
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #000;
+                        text-align: center;
+                        span 
+                        {
+                            color: $secondary-color-1;
+                            font-size: 18px;
+                            margin: 0.2rem;
+                        }
+                    }
+                }
+            }
+        }
+        .card_btns 
+        {
+            position: relative;
+            top: -4rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            .common_btn 
+            {
+                border: 0;
+                outline: 0;
+                background: $secondary-color;
+                padding: 1.3rem 1rem;
+                color: $light-color;
+                font-size: 1.2rem;
+                font-weight: 600;
+                @include border-radius(0.5rem);
+                &:first-child 
+                {
+                    width: 60%;
+                }
+                &:nth-child(2) 
+                {
+                    width: 20%;
+                }
+                &:nth-child(3) 
+                {
+                    width: 15%;
+                }
+                &:nth-child(4) 
+                {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

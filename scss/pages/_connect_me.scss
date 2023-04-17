@@ -1,0 +1,136 @@
+.card_container
+{
+    ::placeholder 
+    {
+        color: $dark-color-8 !important;
+        font-weight: 300;
+    }
+    .card_wrapper 
+    {
+
+     .profile_card
+     {
+        &-header 
+        {
+            &_top 
+            {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 1rem;
+              background: $secondary-color;
+              @include box-shadow(0 0.1rem 0.1rem $dark-color-1);
+
+            }
+        }
+     }
+        .connect_wrapper 
+        {
+            h3 
+            {
+                margin-bottom: 0;
+                color: $light-color;
+                font-weight: 600;
+            }
+        
+        }
+
+        .back_option 
+        {
+            #back 
+            {
+                width: 2.5rem;
+                height: 2.5rem;
+                @include box-shadow(0 0.1rem 0.2rem $dark-color-1);
+                @extend .flex_center;
+                @include border-radius(50%);
+                border: 0.1rem solid $light-color-2;
+                background: $light-color;
+                &:hover 
+                {
+                    background: $primary-color;
+                }
+                &:hover i
+                {
+                    color: $light-color;
+                }
+                
+                &:focus 
+                {
+                    @include box-shadow(none);
+                }
+                i 
+                {
+                    color: $dark-color-8;
+                }
+            }
+        }
+        
+        .connect_form 
+        {
+            padding: 1.5rem;
+            h1 
+            {
+                font-size: clamp(1.2rem , 2vw , 1.2rem);
+                color: $dark-deep;
+                text-align: center;
+        
+            }
+            h6 
+            {
+                font-size: clamp(1rem , 2vw , 1rem);
+                color: $dark-color-8;
+                text-align: center;
+                line-height: 1.5;
+                margin-bottom: 4rem;
+                
+            }
+            label 
+            {
+                font-size: 1rem;
+                font-weight: 400;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                color: $dark-deep;
+                .example 
+                {
+                    text-align: right;
+                    font-size: 0.8rem;
+                   display: block;
+                }
+            }
+            .inputBx input
+            {
+                color: $light-color;
+                border: 1px solid rgb(114 57 214 / 25%);
+                @include transition(0.3s ease);
+                color: $dark-color;
+                &:focus 
+                {
+                    border-color: rgb(114 57 214 / 75%);
+                }
+               
+            }
+            .connect_btns 
+            {
+                .button 
+                {
+                    @extend .flex_center;
+                    @include border-radius(0.5rem);
+                    border: 0.1rem solid $light-gray-1;
+                    background: $secondary-color;
+                    width: 50%;
+                    margin: 0 auto;
+                    color: $light-color;
+                    &:hover 
+                    {
+                        background: $primary-color;
+                        color: $light-color;
+                    }
+                }
+            }
+        }
+    }
+
+}

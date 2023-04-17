@@ -1,0 +1,19 @@
+.card_container 
+{
+    position: relative;
+    @extend .flex_center;
+    width: 100%;
+    height: 100vh;
+
+    .card_wrapper 
+    {
+        position: relative;
+        width: 425px;
+        height: 720px;
+        background: $dark-color;
+    }
+    .card_inner 
+    {
+        background-color: #fff;
+    }
+}

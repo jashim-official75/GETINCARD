@@ -1,0 +1,13 @@
+.card_container 
+{
+    position: relative;
+    @extend .flex_center;
+
+    .card_wrapper 
+    {
+        position: relative;
+        width: 425px;
+        height: 720px;
+        background: red;
+    }
+}
