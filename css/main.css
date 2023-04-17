@@ -600,7 +600,7 @@ header nav ul li a:hover {
   color: #000;
 }
 
-.pop, #sidebar-cart div.action-buttons a.view-cart-button:hover,
+.pop, .add_new-btn .addnew_btn:hover, #sidebar-cart div.action-buttons a.view-cart-button:hover,
 #sidebar-cart div.action-buttons a.checkout-button:hover, .primary_btn:hover {
   animation: pop 0.2s linear forwards;
 }
@@ -3262,6 +3262,66 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #4A1F96;
   border-radius: 50%;
   box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.6);
+}
+#profile_preview .socail_link .link_items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#profile_preview .socail_link .link_items .select_platform {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  width: 100%;
+  background: transparent;
+  border-radius: 5px;
+}
+#profile_preview .socail_link .link_items .select_platform select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: #7239D6;
+  color: #fff;
+  padding: 0.8rem 1rem;
+}
+#profile_preview .socail_link .link_items .select_platform .socail_url {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+#profile_preview .socail_link .link_items .select_platform .socail_url input {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.5rem;
+}
+#profile_preview .socail_link .link_items .select_platform ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+#profile_preview .socail_link .link_items .select_platform ::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.add_new-btn .addnew_btn {
+  background: linear-gradient(to top, rgba(114, 57, 214, 0.5), rgba(74, 31, 150, 0.5));
+  color: #fff;
+  padding: 0.5rem 1rem;
+  width: 150px;
+  margin-left: auto;
+  display: block;
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+.add_new-btn .addnew_btn:hover {
+  border-color: #7239D6;
 }
 
 .profile_wrapper {
